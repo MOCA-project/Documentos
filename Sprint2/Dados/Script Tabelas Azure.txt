@@ -79,3 +79,13 @@ id_obj bigint,
 foreign key (id_obj) references objetivo(id_objetivo)
 );
 
+
+create table arquivo (
+id_arquivo bigint primary key IDENTITY(1,1),
+arquivo_txt varbinary(max),
+id_cliente bigint,
+foreign key (id_cliente) references [dbo].[cliente](id)
+);
+
+
+
